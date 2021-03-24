@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
   titulo = 'BootCamp Angular DWC';
   logo = '/assets/logo.png';
   menu: Array<PoMenuItem>;
-  profileActions: Array<PoToolbarAction>;
+  profileActions: Array<PoToolbarAction>=[];
   profile: PoToolbarProfile = {
     avatar:'', title:''
   }
