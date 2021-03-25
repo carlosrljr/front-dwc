@@ -38,4 +38,8 @@ export class ClientesService {
       })
     )
   }
+
+  apagaCliente(id:string):Observable<Cliente>{
+    return this.http.delete<Cliente>(`${URL}/${id}`)
+  }
 }
