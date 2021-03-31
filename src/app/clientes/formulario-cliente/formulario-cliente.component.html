@@ -1,1 +1,74 @@
-<p>formulario-cliente works!</p>
+<po-page-edit
+[p-title]='title'
+[p-breadcrumb]="breadcrumb"
+(p-cancel)='cancel()'
+(p-save)="save()"
+>
+  <form [formGroup]='clienteForm'>
+    <div class="po-row">
+      <po-input
+        class="po-md-2"
+        name="id"
+        formControlName="id"
+        p-label="ID"
+      ></po-input>
+
+      <po-input
+      class="po-md-10"
+      name="nome"
+      formControlName="nome"
+      p-label="Nome"
+      p-required
+    ></po-input>
+    </div>
+
+    <hr>
+
+    <div class="po-row">
+      <po-select
+      class="po-md-4"
+      name="sexo"
+      formControlName="sexo"
+      p-label="Sexo"
+      [p-options]="sexOpt"
+      ></po-select>
+
+      <po-datepicker
+      class="po-md-8"
+      name="dataNascimento"
+      formControlName="dataNascimento"
+      p-label="Data de Nascimento"
+    ></po-datepicker>
+
+    </div>
+
+    <hr>
+
+    <div class="po-row">
+      <po-input
+        class="po-md-6"
+        name="endereco"
+        formControlName="endereco"
+        p-label="Endereço"
+      ></po-input>
+
+      <po-combo
+      class="po-md-3"
+      name="estado"
+      formControlName="estado"
+      p-label="Estado"
+      [p-options]="estadoOpt"
+      ></po-combo>
+
+      <po-combo
+      class="po-md-3"
+      name="cidade"
+      formControlName="cidade"
+      p-label="Cidade"
+      [p-options]="cidadeOpt"
+      ></po-combo>
+
+    </div>
+
+  </form>
+</po-page-edit>

@@ -54,8 +54,8 @@ export class ClientesComponent implements OnInit {
     this.router.navigate(['home/clientes/view', cliente.id])
   }
 
-  editar(){
-
+  editar(cliente:Cliente){
+    this.router.navigate(['home/clientes/edit', cliente.id])
   }
 
 }

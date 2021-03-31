@@ -39,7 +39,7 @@ export class ClienteDetalheComponent implements OnInit {
       F: "Feminino",
       P: "Prefiro não informar"
     };
-    return sexoOpt[this.cliente.sexo] ?? sexoOpt.P
+    return sexoOpt[this.cliente?.sexo] ?? sexoOpt.P
   }
 
   voltar(){
